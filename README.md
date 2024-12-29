@@ -4,3 +4,8 @@
 - Part 57 : Inputs and Forms ✅
 - Part 58 : TextInput Props ✅
 - Part 59 : Multiline TextInput ✅
+- Part 60 : Switch ✅
+- Part 61 : Login Form ✅
+- Part 62 : KeyboardAvoidingView ✅
+- Part 63 : Form Validation ✅
+- Part 64 : Form Submission ✅

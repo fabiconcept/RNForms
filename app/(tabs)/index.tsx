@@ -1,9 +1,11 @@
-import { StyleSheet, Text, TextInput, View } from "react-native";
+import { StyleSheet, Switch, Text, TextInput, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useState } from "react";
 
 export default function index() {
     const [name, setName] = useState("");
+    const [darkMode, setDarkMode] = useState(false);
+    
 
     return (
         <SafeAreaView style={styles.container}>
@@ -27,6 +29,19 @@ export default function index() {
                 multiline
                 textAlignVertical="top"
             />
+
+            <View style={styles.switchContainer}>
+                <Text style={styles.switchText}>Dark Mode</Text>
+                <Switch
+                    value={darkMode}
+                    onValueChange={(value) => setDarkMode(value)}
+                    trackColor={{
+                        false: "#767577",
+                        true: "#81b0ff",
+                    }}
+                    thumbColor={darkMode ? "#f5dd4b" : "#f5f5f5"}
+                />
+            </View>
         </SafeAreaView>
     )
 }
@@ -47,5 +62,14 @@ const styles = StyleSheet.create({
     },
     multiline: {
         minHeight: 100,
+    },
+    switchContainer: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        paddingHorizontal: 10,
+    },
+    switchText: {
+        fontSize: 16,
     }
 })
